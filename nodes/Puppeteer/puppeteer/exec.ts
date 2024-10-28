@@ -538,6 +538,7 @@ export default async function (
 			json: {
 				headers,
 				statusCode,
+				targetURL: urlString,
 			},
 		};
 
