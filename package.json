@@ -35,16 +35,13 @@
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
+    "credentials": [],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/Puppeteer/Puppeteer.node.js"
     ]
   },
   "devDependencies": {
+    "@types/node-ipc": "^9.2.3",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
@@ -57,6 +54,10 @@
     "n8n-workflow": "*"
   },
   "dependencies": {
-    "puppeteer": "^23.6.1"
+    "axios": "^1.7.7",
+    "node-ipc": "^12.0.0",
+    "puppeteer": "^23.6.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }
