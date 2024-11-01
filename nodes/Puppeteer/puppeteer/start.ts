@@ -14,6 +14,12 @@ export default async function (globalOptions: IDataObject) {
 	// More on launch arguments: https://www.chromium.org/developers/how-tos/run-chromium-with-flags/
 	if (launchArgs && launchArgs.length > 0) {
 		args.push(...launchArgs.map((arg: IDataObject) => arg.arg as string));
+	} else {
+		args.push(...["--no-sandbox", 
+			'--headless',
+			'--disable-gpu',
+			'--disable-dev-shm-usage']
+		);
 	}
 
 	// More on proxying: https://www.chromium.org/developers/design-documents/network-settings
