@@ -10,6 +10,8 @@ export default async function (globalOptions: IDataObject) {
 	// const pageCaching = globalOptions.pageCaching !== false;
 	const launchArgs: IDataObject[] = launchArguments.args as IDataObject[];
 	const args: string[] = [];
+	console.log(`launchArgments:` + launchArguments);
+	console.log(`launchArgs:` + launchArgs);
 
 	// More on launch arguments: https://www.chromium.org/developers/how-tos/run-chromium-with-flags/
 	if (launchArgs && launchArgs.length > 0) {
@@ -18,7 +20,7 @@ export default async function (globalOptions: IDataObject) {
 		args.push(...["--no-sandbox", 
 			'--headless',
 			'--disable-gpu',
-			'--disable-dev-shm-usage']
+			'--disable-dev-shm-usage'].map((arg:any) => arg.arg as string)
 		);
 	}
 
