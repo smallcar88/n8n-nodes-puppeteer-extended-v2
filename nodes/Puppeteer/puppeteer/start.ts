@@ -10,8 +10,10 @@ export default async function (globalOptions: IDataObject) {
 	// const pageCaching = globalOptions.pageCaching !== false;
 	const launchArgs: IDataObject[] = launchArguments.args as IDataObject[];
 	const args: string[] = [];
-	console.log(`launchArgments:` + launchArguments);
-	console.log(`launchArgs:` + launchArgs);
+	console.log(`launchArgments:`)
+	console.log(launchArguments);
+	console.log(`launchArgs:`)
+	console.log(launchArgs);
 
 	// More on launch arguments: https://www.chromium.org/developers/how-tos/run-chromium-with-flags/
 	if (launchArgs && launchArgs.length > 0) {
