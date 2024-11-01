@@ -22,7 +22,7 @@ export default async function (globalOptions: IDataObject) {
 		args.push(...["--no-sandbox", 
 			'--headless',
 			'--disable-gpu',
-			'--disable-dev-shm-usage'].map((arg:any) => arg.arg as string)
+			'--disable-dev-shm-usage']
 		);
 	}
 
